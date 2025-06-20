@@ -1,4 +1,3 @@
-
 from streamlit_javascript import st_javascript
 from ..helper import Helper
 from typing import Optional
@@ -10,22 +9,21 @@ import json
 class Docnoformat:
     _resource_name = "docnoformat"
 
-    
     def response(self, action: str, options: Optional[ApiOption] = {}):
-      return Helper.get_api_response(
-          resource=self._resource_name, action=action, options=options
-      )
+        return Helper.get_api_response(
+            resource=self._resource_name, action=action, options=options
+        )
 
     def openOnScreenForm(self, id: Optional[str] = None):
-      id_js = f"'{id}'" if id else "undefined"
+        id_js = f"'{id}'" if id else "undefined"
 
-      html(
-          f"""
+        html(
+            f"""
           <script>
               window.parent.openOnScreenResourceForm('{self._resource_name}', {{
                   id: {id_js}
               }});
           </script>
           """,
-          height=0,
-      )
+            height=0,
+        )
