@@ -1,0 +1,2 @@
+streamlit
+streamlit-javascript @ git+https://github.com/thunderbug1/streamlit-javascript.git@1.42.0

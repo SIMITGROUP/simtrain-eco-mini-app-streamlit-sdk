@@ -1,0 +1,2 @@
+black simtrain_eco_mini_app_streamlit_sdk/services/resources/*.py
+black simtrain_eco_mini_app_streamlit_sdk/sdk.py
