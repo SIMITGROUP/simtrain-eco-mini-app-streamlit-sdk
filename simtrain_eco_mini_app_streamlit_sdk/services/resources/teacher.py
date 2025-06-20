@@ -61,7 +61,7 @@ class Teacher:
             "request", resource=self._resource_name, action=action, options=options
         )
         payload = json.dumps({"queryParams": {"period": period}})
-        print(action)
+
         st_javascript(
             f"window.parent.callApi('{self._resource_name}', '{action}', {payload})",
             key=request_key,
