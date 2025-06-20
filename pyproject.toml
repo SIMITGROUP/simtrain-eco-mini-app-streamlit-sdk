@@ -1,6 +1,6 @@
 [project]
 name = "simtrain-eco-mini-app-streamlit-sdk"
-version = "0.0.2"
+version = "0.0.3"
 description = "SDK for Simtrain Eco Mini App with Streamlit"
 authors = [{name="SIMIT GROUP", email="jhyong@simitgroup.com"}]
 dependencies = []
