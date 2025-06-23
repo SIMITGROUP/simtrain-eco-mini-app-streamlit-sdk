@@ -16,6 +16,14 @@ class InitMessageBridge:
                         window.parent.parent.postMessage(message, '*');
                     }
 
+                    window.parent.navigateCurrentMiniApp = function(target, query) {
+                        const message = {
+                            type: 'NAVIGATE_CURRENT_MINI_APP',
+                            params: { target, query }
+                        };
+                        window.parent.parent.postMessage(message, '*');
+                    }
+
                     window.parent.openOnScreenResourceForm = function(
                         resource,
                         params = {},

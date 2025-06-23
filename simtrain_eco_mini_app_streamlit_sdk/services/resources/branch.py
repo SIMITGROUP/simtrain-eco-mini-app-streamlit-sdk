@@ -9,6 +9,20 @@ import json
 class Branch:
     _resource_name = "branch"
 
+    def current(self, options: Optional[ApiOption] = {}):
+        action = "current"
+        request_key = Helper.get_api_key(
+            "request", resource=self._resource_name, action=action, options=options
+        )
+
+        st_javascript(
+            f"window.parent.callApi('{self._resource_name}', '{action}')",
+            key=request_key,
+            on_change=lambda: Helper.set_api_response(
+                resource=self._resource_name, action=action, options=options
+            ),
+        )
+
     def list(self, options: Optional[ApiOption] = {}):
         action = "list"
         request_key = Helper.get_api_key(

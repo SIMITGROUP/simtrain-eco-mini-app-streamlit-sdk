@@ -1,4 +1,5 @@
 from .services.ui import UI
+from .services.current import Current
 from .services.resources.student import Student
 from .services.init_message_bridge import InitMessageBridge
 from .services.helper import Helper as SimtrainSdkHelper
@@ -102,6 +103,8 @@ class SimtrainEcoMiniAppStreamlitSdk:
         InitMessageBridge()
 
         self.ui = UI()
+
+        self.current = Current()
 
         self.helper = SimtrainSdkHelper
 
