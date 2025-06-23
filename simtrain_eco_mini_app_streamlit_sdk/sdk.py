@@ -6,8 +6,6 @@ from .services.helper import Helper as SimtrainSdkHelper
 # ========================== Import Resource ==========================
 
 
-from .services.resources.tenant import Tenant
-
 from .services.resources.organization import Organization
 
 from .services.resources.branch import Branch
@@ -108,8 +106,6 @@ class SimtrainEcoMiniAppStreamlitSdk:
         self.helper = SimtrainSdkHelper
 
         # ========================== Import Resource ==========================
-
-        self.tenant = Tenant()
 
         self.organization = Organization()
 
