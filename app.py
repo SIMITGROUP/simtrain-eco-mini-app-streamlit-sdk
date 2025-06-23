@@ -11,6 +11,11 @@ st.title("Simtrain Eco Streamlit SDK Demo")
 if st.button("Go to Student Page"):
     sdk.ui.navigateTo("managestudents")
 
+# ===================================== Navigate Mini App Page ====================================
+
+if st.button("Go to JS Version SDK (Same Mini App, Diff Page)"):
+    sdk.current.navigateTo("js-version")
+
 
 # ================================= Open On Screen Form ==================================
 
@@ -197,3 +202,22 @@ getTeacherCommissionResult = sdk.teacher.response(
 )
 if getTeacherCommissionResult:
     st.write(getTeacherCommissionResult)
+
+
+# ================================= Current Organization =================================
+
+if st.button("Current Organization"):
+    sdk.organization.current()
+
+current_organization = sdk.organization.response(action="current")
+if current_organization:
+    st.write(current_organization)
+
+# ==================================== Current Branch ====================================
+
+if st.button("Current Branch"):
+    sdk.branch.current()
+
+current_branch = sdk.branch.response(action="current")
+if current_branch:
+    st.write(current_branch)
